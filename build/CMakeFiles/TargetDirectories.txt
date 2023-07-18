@@ -1,0 +1,10 @@
+/media/li/D/桌面/job/lecture/mprpc/build/CMakeFiles/rebuild_cache.dir
+/media/li/D/桌面/job/lecture/mprpc/build/CMakeFiles/edit_cache.dir
+/media/li/D/桌面/job/lecture/mprpc/build/src/CMakeFiles/rebuild_cache.dir
+/media/li/D/桌面/job/lecture/mprpc/build/src/CMakeFiles/mprpc.dir
+/media/li/D/桌面/job/lecture/mprpc/build/src/CMakeFiles/edit_cache.dir
+/media/li/D/桌面/job/lecture/mprpc/build/example/CMakeFiles/rebuild_cache.dir
+/media/li/D/桌面/job/lecture/mprpc/build/example/CMakeFiles/edit_cache.dir
+/media/li/D/桌面/job/lecture/mprpc/build/example/callee/CMakeFiles/rebuild_cache.dir
+/media/li/D/桌面/job/lecture/mprpc/build/example/callee/CMakeFiles/provider.dir
+/media/li/D/桌面/job/lecture/mprpc/build/example/callee/CMakeFiles/edit_cache.dir
