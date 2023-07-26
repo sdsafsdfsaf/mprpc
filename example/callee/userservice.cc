@@ -63,6 +63,6 @@ int main(int argc, char **argv)
     MprpcApplication::GetInstance();
     RpcProvider provider;
     provider.NotifyService(new UserService);
-    // provider.Run();
+    provider.Run();
     return 0;
 }

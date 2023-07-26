@@ -5,11 +5,21 @@ src/CMakeFiles/mprpc.dir/mprpcapplication.cc.o
  /media/li/D/桌面/job/lecture/mprpc/src/./include/mprpcapplication.h
  /media/li/D/桌面/job/lecture/mprpc/src/./include/mprpcconfig.h
  /media/li/D/桌面/job/lecture/mprpc/src/mprpcapplication.cc
+src/CMakeFiles/mprpc.dir/mprpcchannel.cc.o
+ ../src/include/mprpcapplication.h
+ ../src/include/mprpcchannel.h
+ ../src/include/mprpcconfig.h
+ ../src/include/rpcheader.pb.h
+ /media/li/D/桌面/job/lecture/mprpc/src/mprpcchannel.cc
 src/CMakeFiles/mprpc.dir/mprpcconfig.cc.o
  ../src/include/mprpcconfig.h
  /media/li/D/桌面/job/lecture/mprpc/src/mprpcconfig.cc
+src/CMakeFiles/mprpc.dir/rpcheader.pb.cc.o
+ ../src/include/rpcheader.pb.h
+ /media/li/D/桌面/job/lecture/mprpc/src/rpcheader.pb.cc
 src/CMakeFiles/mprpc.dir/rpcprovider.cc.o
  ../src/include/mprpcapplication.h
  ../src/include/mprpcconfig.h
+ ../src/include/rpcheader.pb.h
  ../src/include/rpcprovider.h
  /media/li/D/桌面/job/lecture/mprpc/src/rpcprovider.cc
