@@ -1,4 +1,4 @@
-1.0 ����
+1.0 ²âÊÔ
  ./provider -i test.conf
 RpcProvider start service at ip:127.0.0.1 port:8000
 20230726 05:43:00.299435Z 18991 INFO  TcpServer::newConnection [RpcProvider] - new connection [RpcProvider-127.0.0.1:8000#1] from 127.0.0.1:40944 - TcpServer.cc:80
@@ -16,7 +16,7 @@ name:zhang san pwd:123456
 20230726 05:43:00.299835Z 18991 INFO  TcpServer::removeConnectionInLoop [RpcProvider] - connection RpcProvider-127.0.0.1:8000#1 - TcpServer.c
 
 1.1
-????????
+添加异步日志模块
 
-1.3
-??zookeeper??????
+1.2
+添加zookeeper管理服务节点
