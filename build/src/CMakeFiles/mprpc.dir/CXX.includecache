@@ -88,6 +88,18 @@ google/protobuf/descriptor.h
 unordered_map
 -
 
+../src/include/zookeeperutil.h
+semaphore.h
+-
+zookeeper/zookeeper.h
+-
+string
+-
+mprpcapplication.h
+../src/include/mprpcapplication.h
+iostream
+-
+
 /media/li/D/桌面/job/lecture/mprpc/src/./include/mprpcapplication.h
 proc_service.h
 -
@@ -131,6 +143,8 @@ string
 -
 unistd.h
 -
+zookeeperutil.h
+/media/li/D/桌面/job/lecture/mprpc/src/zookeeperutil.h
 
 /media/li/D/桌面/job/lecture/mprpc/src/mprpcconfig.cc
 mprpcconfig.h
@@ -171,4 +185,10 @@ rpcheader.pb.h
 /media/li/D/桌面/job/lecture/mprpc/src/rpcheader.pb.h
 iostream
 -
+zookeeperutil.h
+/media/li/D/桌面/job/lecture/mprpc/src/zookeeperutil.h
+
+/media/li/D/桌面/job/lecture/mprpc/src/zookeeperutil.cc
+zookeeperutil.h
+/media/li/D/桌面/job/lecture/mprpc/src/zookeeperutil.h
 

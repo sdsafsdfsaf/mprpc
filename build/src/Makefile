@@ -287,6 +287,33 @@ rpcprovider.cc.s:
 	cd /media/li/D/桌面/job/lecture/mprpc/build && $(MAKE) -f src/CMakeFiles/mprpc.dir/build.make src/CMakeFiles/mprpc.dir/rpcprovider.cc.s
 .PHONY : rpcprovider.cc.s
 
+zookeeperutil.o: zookeeperutil.cc.o
+
+.PHONY : zookeeperutil.o
+
+# target to build an object file
+zookeeperutil.cc.o:
+	cd /media/li/D/桌面/job/lecture/mprpc/build && $(MAKE) -f src/CMakeFiles/mprpc.dir/build.make src/CMakeFiles/mprpc.dir/zookeeperutil.cc.o
+.PHONY : zookeeperutil.cc.o
+
+zookeeperutil.i: zookeeperutil.cc.i
+
+.PHONY : zookeeperutil.i
+
+# target to preprocess a source file
+zookeeperutil.cc.i:
+	cd /media/li/D/桌面/job/lecture/mprpc/build && $(MAKE) -f src/CMakeFiles/mprpc.dir/build.make src/CMakeFiles/mprpc.dir/zookeeperutil.cc.i
+.PHONY : zookeeperutil.cc.i
+
+zookeeperutil.s: zookeeperutil.cc.s
+
+.PHONY : zookeeperutil.s
+
+# target to generate assembly for a file
+zookeeperutil.cc.s:
+	cd /media/li/D/桌面/job/lecture/mprpc/build && $(MAKE) -f src/CMakeFiles/mprpc.dir/build.make src/CMakeFiles/mprpc.dir/zookeeperutil.cc.s
+.PHONY : zookeeperutil.cc.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -314,6 +341,9 @@ help:
 	@echo "... rpcprovider.o"
 	@echo "... rpcprovider.i"
 	@echo "... rpcprovider.s"
+	@echo "... zookeeperutil.o"
+	@echo "... zookeeperutil.i"
+	@echo "... zookeeperutil.s"
 .PHONY : help
 
 

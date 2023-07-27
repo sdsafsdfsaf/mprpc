@@ -6,6 +6,7 @@
 #include <arpa/inet.h>
 #include <string>
 #include <unistd.h>
+#include "zookeeperutil.h"
 
 void MprpcChannel::CallMethod(const google::protobuf::MethodDescriptor *method,
                               google::protobuf::RpcController *controller,
@@ -46,8 +47,15 @@ void MprpcChannel::CallMethod(const google::protobuf::MethodDescriptor *method,
         // TODO
     }
 
-    std::string ip = MprpcApplication::GetInstance().GetConfig().Load("rpcserverip");
-    uint16_t port = atoi(MprpcApplication::GetInstance().GetConfig().Load("rpcserverport").c_str());
+    // std::string ip = MprpcApplication::GetInstance().GetConfig().Load("rpcserverip");
+    // uint16_t port = atoi(MprpcApplication::GetInstance().GetConfig().Load("rpcserverport").c_str());
+    std::string method_path = "/" + service_name + "/" + method_name;
+    ZkClient zkCli;
+    zkCli.Start();
+    std::string host_data = zkCli.GetData(method_path.c_str());
+    int idx = host_data.find(":");
+    std::string ip = host_data.substr(0, idx);
+    uint16_t port = atoi(host_data.substr(idx + 1, host_data.size() - idx).c_str());
 
     struct sockaddr_in sever_addr;
     sever_addr.sin_family = AF_INET;

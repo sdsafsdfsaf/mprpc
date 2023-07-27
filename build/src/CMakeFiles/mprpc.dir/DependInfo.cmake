@@ -10,6 +10,7 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "/media/li/D/桌面/job/lecture/mprpc/src/mprpcconfig.cc" "/media/li/D/桌面/job/lecture/mprpc/build/src/CMakeFiles/mprpc.dir/mprpcconfig.cc.o"
   "/media/li/D/桌面/job/lecture/mprpc/src/rpcheader.pb.cc" "/media/li/D/桌面/job/lecture/mprpc/build/src/CMakeFiles/mprpc.dir/rpcheader.pb.cc.o"
   "/media/li/D/桌面/job/lecture/mprpc/src/rpcprovider.cc" "/media/li/D/桌面/job/lecture/mprpc/build/src/CMakeFiles/mprpc.dir/rpcprovider.cc.o"
+  "/media/li/D/桌面/job/lecture/mprpc/src/zookeeperutil.cc" "/media/li/D/桌面/job/lecture/mprpc/build/src/CMakeFiles/mprpc.dir/zookeeperutil.cc.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 
