@@ -6,6 +6,26 @@
 
 #IncludeRegexTransform: 
 
+../src/include/lockqueue.h
+queue
+-
+mutex
+-
+condition_variable
+-
+
+../src/include/logger.h
+lockqueue.h
+../src/include/lockqueue.h
+string
+-
+time.h
+-
+iostream
+-
+thread
+-
+
 ../src/include/mprpcapplication.h
 proc_service.h
 -
@@ -79,6 +99,10 @@ unordered_map
 -
 string
 -
+
+/media/li/D/桌面/job/lecture/mprpc/src/logger.cc
+logger.h
+/media/li/D/桌面/job/lecture/mprpc/src/logger.h
 
 /media/li/D/桌面/job/lecture/mprpc/src/mprpcapplication.cc
 ./include/mprpcapplication.h

@@ -4,6 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
+  "/media/li/D/桌面/job/lecture/mprpc/src/logger.cc" "/media/li/D/桌面/job/lecture/mprpc/build/src/CMakeFiles/mprpc.dir/logger.cc.o"
   "/media/li/D/桌面/job/lecture/mprpc/src/mprpcapplication.cc" "/media/li/D/桌面/job/lecture/mprpc/build/src/CMakeFiles/mprpc.dir/mprpcapplication.cc.o"
   "/media/li/D/桌面/job/lecture/mprpc/src/mprpcchannel.cc" "/media/li/D/桌面/job/lecture/mprpc/build/src/CMakeFiles/mprpc.dir/mprpcchannel.cc.o"
   "/media/li/D/桌面/job/lecture/mprpc/src/mprpcconfig.cc" "/media/li/D/桌面/job/lecture/mprpc/build/src/CMakeFiles/mprpc.dir/mprpcconfig.cc.o"
