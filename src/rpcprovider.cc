@@ -48,7 +48,7 @@ void RpcProvider::Run()
         }
     }
 
-    // Æô¶¯ÍøÂç·şÎñ
+    // å¯åŠ¨ç½‘ç»œæœåŠ¡
     server.start();
     m_eventLoop.loop();
 }
@@ -65,7 +65,7 @@ void RpcProvider::OnMessage(const muduo::net::TcpConnectionPtr &conn, muduo::net
     std::string recv_buf = buffer->retrieveAllAsString();
     uint32_t header_size = 0;
     recv_buf.copy((char *)&header_size, 4, 0);
-    std::string rpc_header_str = recv_buf.substr(4, header_size); // FIXME ÕâÀïµÄrpc_header_strÖµÓĞÎÊÌâ£¬¾ßÌå¿´README
+    std::string rpc_header_str = recv_buf.substr(4, header_size);
     mprpc::RpcHeader rpcHeader;
     std::string service_name;
     std::string method_name;
@@ -78,19 +78,17 @@ void RpcProvider::OnMessage(const muduo::net::TcpConnectionPtr &conn, muduo::net
     }
     else
     {
-        // Êı¾İÍ··´ĞòÁĞ»¯Ê§°Ü
+        // æ•°æ®å¤´ååºåˆ—åŒ–å¤±è´¥
         std::cout << "rpc_header_str:" << rpc_header_str << " parse error!" << std::endl;
         return;
     }
     std::string args_str = recv_buf.substr(4 + header_size, args_size);
 
-    // ´òÓ¡µ÷ÊÔĞÅÏ¢
+    // æ‰“å°è°ƒè¯•ä¿¡æ¯
     std::cout << "============================================" << std::endl;
     std::cout << "header_size: " << header_size << std::endl;
-    std::cout << "rpc_header_str: " << rpc_header_str << std::endl;
     std::cout << "service_name: " << service_name << std::endl;
     std::cout << "method_name: " << method_name << std::endl;
-    std::cout << "args_str: " << args_str << std::endl;
     std::cout << "============================================" << std::endl;
 
     auto it = m_serviceMap.find(service_name);
@@ -116,7 +114,7 @@ void RpcProvider::OnMessage(const muduo::net::TcpConnectionPtr &conn, muduo::net
     google::protobuf::Message *response = service->GetResponsePrototype(method).New();
     google::protobuf::Closure *done = google::protobuf::NewCallback<RpcProvider,
                                                                     const muduo::net::TcpConnectionPtr &,
-                                                                    google::protobuf::Message *>(this, &RpcProvider::SendRpcResponse, conn, response); // Î´Ö¸¶¨ÀàĞÍÊ±£¬ÍÆÀí²»³öÀ´
+                                                                    google::protobuf::Message *>(this, &RpcProvider::SendRpcResponse, conn, response); // æœªæŒ‡å®šç±»å‹æ—¶ï¼Œæ¨ç†ä¸å‡ºæ¥
     service->CallMethod(method, nullptr, request, response, done);
 }
 

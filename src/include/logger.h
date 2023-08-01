@@ -36,7 +36,7 @@ class Logger
 public:
     static Logger &GetInstance();
     void SetLogLevel(LogLevel level);
-    void Log(const std::string &); // ¼Ó²»¼Óconst£¿ //FIXME
+    void Log(const std::string &);
 
 private:
     Logger();

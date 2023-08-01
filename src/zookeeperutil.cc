@@ -36,7 +36,7 @@ void ZkClient::Start()
     sem_t sem;
     sem_init(&sem, 0, 0);
     zoo_set_context(m_zhandle, &sem);
-
+    std::cout << "wait for connection" << std::endl;
     sem_wait(&sem);
     std::cout << "zookeeper_init success!" << std::endl;
 }

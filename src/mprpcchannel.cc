@@ -19,7 +19,7 @@ void MprpcChannel::CallMethod(const google::protobuf::MethodDescriptor *method,
     std::string method_name = method->name();
 
     uint32_t args_size;
-    std::string args_str;
+    std::string args_str = {0};
     if (request->SerializeToString(&args_str))
     {
         args_size = args_str.size();
@@ -30,16 +30,27 @@ void MprpcChannel::CallMethod(const google::protobuf::MethodDescriptor *method,
     rpcHeader.set_method_name(method_name);
     rpcHeader.set_args_size(args_size);
     uint32_t header_size;
-    std::string header;
+    std::string header = {0};
     if (rpcHeader.SerializeToString(&header))
     {
         header_size = header.size();
     }
+    // std::cout << "header_size = " << header_size << std::endl;
+    // std::string a = std::string((char *)&header_size, 4);
+    // std::cout << "a = " << a << std::endl;
+    // std::cout << "a.size() = " << a.size() << std::endl;
 
     std::string send_rpc_str;
-    send_rpc_str.insert(0, std::string((char *)&header_size, 4)); // ÓÐ´ýÀí½â
-    send_rpc_str.append(header);
-    send_rpc_str.append(args_str);
+    send_rpc_str.insert(0, std::string((char *)&header_size, 4));
+    // std::cout << "send_rpc_str = " << send_rpc_str << std::endl;
+    // send_rpc_str.append(header);
+    // send_rpc_str.append(args_str);
+    send_rpc_str += header;
+    // std::cout << "send_rpc_str = " << send_rpc_str << std::endl;
+    send_rpc_str += args_str;
+    // std::cout << "send_rpc_str = " << send_rpc_str << std::endl;
+    // debug
+    // std::cout << "send_rpc_str = " << send_rpc_str << std::endl;
 
     int clientfd = socket(AF_INET, SOCK_STREAM, 0);
     if (clientfd == -1)
